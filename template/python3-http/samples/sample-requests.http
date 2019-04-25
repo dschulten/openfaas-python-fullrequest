@@ -1,0 +1,62 @@
+POST http://localhost:5000
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:5000
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "foo": "bar"
+}
+
+###
+
+POST http://localhost:5000
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+foo=bar
+
+###
+
+POST http://localhost:5000
+Accept: application/pdf
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="resultFileName"
+
+My merged file.pdf
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="FirstDocument.pdf"
+Content-Type: application/pdf
+
+< FirstDocument.pdf
+
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="SecondDocument.pdf"
+Content-Type: application/pdf
+
+< SecondDocument.pdf
+
+###
+###
+
+POST http://localhost:5000
+Accept: application/pdf
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="resultFileName"
+
+My merged file.pdf
+
+###
+
+
