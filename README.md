@@ -1,7 +1,7 @@
 OpenFaaS Python Flask Templates
 =============================================
 
-The Python Flask templates that make use of the incubator project [of-watchdog](https://github.com/openfaas-incubator/of-watchdog).
+The Python Flask templates that make use of the incubator project [of-watchdog](https://github.com/openfaas-incubator/of-watchdog), with simple support for multipart/form-data. Also see https://github.com/dschulten/python-flask-template/tree/multipart-form-data-support.
 
 Templates available in this repository:
 - python27-flask
@@ -15,7 +15,7 @@ Notes:
 
 ## Downloading the templates
 ```
-$ faas template pull https://github.com/openfaas-incubator/python-flask-template
+$ faas template pull https://github.com/dschulten/openfaas-python-fullrequest
 ```
 
 # Using the python27-flask/python3-flask templates
